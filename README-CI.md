@@ -9,7 +9,7 @@ This section discusses setting up Docker, building the container, and making/usi
   - On Windows, Docker can be installed from [Docker's Website](https://docs.docker.com/engine/install/).
   - Since I am also using Ubuntu as my (required) WSL instance, I will also have to `sudo apt install docker` so I can work with the GitHub repository locally.
 - To build and configure a container without building an image...
-  - t 
+  - We have an example application provided to use called `angular-bird` that contains a simple Angular application, and requires angular version 15.0.3 and Node.js version 18 to run.
 - What instructions does the `Dockerfile` contain?:
   - t 
 - How do you build an image using the `Dockerfile`?:

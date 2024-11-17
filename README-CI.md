@@ -27,7 +27,7 @@ This section discusses setting up Docker, building the container, and making/usi
   - `RUN` can run commands; in this case, it installs the corresponding angular version using `npm`.
   - `EXPOSE` tells what port number the container should "expose" or use on your system primarily.
   - `CMD` is a command to run in order for the program to operate, which in this case is the `ng serve` command used in the previous task.
-  - An example of what my Dockerfile looks like can be found below.
+  - An example of what my Dockerfile looks like can be found below, or in the actual Dockerfile located in this repository.
 ```
 FROM node:18-bullseye
 

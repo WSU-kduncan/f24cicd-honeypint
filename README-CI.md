@@ -56,7 +56,18 @@ CMD ["ng", "serve", "--host", "0.0.0.0"]
   - This can be done with both methods -- based on how I set it up, I can literally go to `localhost:4200`, since I bound it to the 4200 port using `-p 4200:4200`. (Note that both entires are 4200, since the angular app also uses port 4200. I could change it to `80:4200` to access it on port 80 instead.)
  
 ### Working With DockerHub
-t
+This section discusses using DockerHub. It assumes that an account has already been made on the DockerHub website.
+- How do you create a new DockerHub public repository?:
+  - Sign in, go to hub.docker.com, and you can click the blue "Create repository" button.
+  - Name the repository accordingly, and make sure to set the Visibility as Public (which should be the default). 
+- How do you authenticate with DockerHub via CLI using DockerHub credentials?:
+  - You can use the command `docker login` in order to log into your DockerHub account through the command line.
+  - There are two ways you can do this: you can either do to the activate site and enter in the provided code while logged into your DockerHub account on the web browser, OR you can log in through the commandline by using `docker login -u username`.
+- How do you push your container image to DockerHub?:
+  - I can push my container image using the following two commands:
+  - `docker tag angular:1.0.0 kclondon22/cox-ceg3120` - connects the `angular:1.0.0` image with the DockerHub repository
+  - `docker push kclondon22/cox-ceg3120` - pushes the connection, specifically pushing it as `latest` in this case.
+- My DockerHub repository, `kclondon22/cox-ceg3120`, can be found linked [here](https://hub.docker.com/repository/docker/kclondon22/cox-ceg3120/general).
 
 ## Part 2 - GitHub Actions and DockerHub
 t

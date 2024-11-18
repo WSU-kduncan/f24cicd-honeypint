@@ -48,7 +48,7 @@ CMD ["ng", "serve", "--host", "0.0.0.0"]
 ```
 - How do you build an image using the `Dockerfile`?:
   - You can build an image using the Dockerfile by running a `docker build` command in the file where the Dockerfile is located (or otherwise if you specify the path).
-  -  `docker build -t angular:1.0.0 .`, where `angular:1.0.0` is going to be the name of the image, and `.` will be the file path of where the Dockerfile is (in this context, I am running this *in this repository*).
+  -  `docker build -t angular:1.0.0 .`, where `angular:1.0.0` is going to be the name of the image (`name:tag` format), and `.` will be the file path of where the Dockerfile is (in this context, I am running this *in this repository*).
 - How do you run a container from the image build by the repo's `Dockerfile`?:
   - You can run a container using the Dockerfile by running a `docker run` command where the Dockerfile is located. Make sure the Dockerfile using correct paths based on where it is, which should be done in the previous step!
   - `docker run --name angulartest --rm -p 4200:4200 angular:1.0.0` accomplishes the same thing as done in Task 6, where `angular:1.0.0` is the container name. 

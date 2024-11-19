@@ -2,7 +2,9 @@
 ## Part 1 - Docker-ize It
 
 ### Overview
-In this project, I am tasked to utilize Docker/DockerHub to create and develop a container that runs a given `angular-bird` application. I am also tasked with connecting this GitHub repository to a repository in DockerHub, and interacting with the two in order to edit the container and otherwise. Finally, I will identify how these tools interact with each other through diagramming.
+In this project, I am tasked to utilize Docker/DockerHub to create and develop a container that runs a given `angular-bird` application. I am also tasked with connecting this GitHub repository to a repository in DockerHub, and interacting with the two in order to edit the container and otherwise. This repository will also describe using GitHub Actions. Finally, I will identify how these tools interact with each other through diagramming. The diagram which describes how everything connects together can be found below.
+#### CI Project Diagram
+![CIDiagram]()
 ### Application Containerization
 This section discusses setting up Docker, building the container, and making/using a Dockerfile.
 - How do you install Docker and its' dependencies on the required systems?:
@@ -73,12 +75,18 @@ This section discusses using DockerHub. It assumes that an account has already b
 t
 
 ### Configuring GitHub Secrets
-t
+This section
+- How to set up a secret for use by GitHub Actions:
+  - t 
+- Secrets set for this project (not specific examples):
+  - t 
 
 ### Behavior of Github Workflow
 t
-
-### Part 3 - Diagrams!
-t
+- Summary of what the workflow does:
+  - t
+- The workflow file can be found linked [here](). (WIP)
+- What would someone need to do to duplicate my workflow (including workflow + repo changes)?:
+  - t 
 
 

@@ -83,7 +83,11 @@ This section discusses utilizing GitHub Secrets for GitHub Actions, and describe
     - Unrelated, but you can "deactivate" certain workflows by putting `.old` or something else in front of them, so for example `myfirstflow.yml`.
   - From there, there is a format you can follow in order to properly create the workflow that you want through a GitHub Action. 
 - How to set up a secret for use by GitHub Actions:
-  - t 
+  - To set up secrets in the first place, you need Admin privleges into the repository that you are working on. So, go get that first...
+  - You can set up secrets in the repository settings in GitHub, in the "Actions" setting section. This is where you can create a new secret. You can give it a specific name, and then store the actual information.
+    - You can never reference the plaintext value that GitHub stores, only they keep it, if you don't have a copy you will lose it. Kind of like how a Key works. If you Edit it, it just replaces the file. 
+    - When referencing it in the Action, use the following syntax: `$ {{ secrets.SECRET_EXAMPLE }}` 
+  - For the context of this project, we only need repository secrets (which is what we made above), not "environment secrets". 
 - Secrets set for this project (not specific examples):
   - This project requires `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets, which will hold the DockerHub username/token combination for my account in order to log in to do the build/push combination of the image.
   - To get a DockerHub account token, go to Account Settings -> Security, and then you can create a new token (make sure, for this context, it has Read and Write permissions)

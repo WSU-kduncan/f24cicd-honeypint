@@ -95,9 +95,14 @@ This section discusses utilizing GitHub Secrets for GitHub Actions, and describe
 ### Behavior of Github Workflow
 This section discusses what the workflow does, and how to duplicate it if need be.
 - Summary of what the workflow does:
-  - t
-- The workflow file can be found linked [here](). (WIP)
+  - The workflow runs on Ubuntu on the latest version.
+  - The workflow sets up actions that are required for docker to build and push an image. (`docker/setup-qemu-action@v3`, `docker/setup-buildx-action@v3`, `docker/login-action@v3`)
+    - For the login action, it accepts the username and password created in GitHub Secrets in the previous section. 
+  - The
+- The workflow file can be found linked [here](https://github.com/WSU-kduncan/f24cicd-honeypint/blob/main/.github/workflows/project4.yml).
 - What would someone need to do to duplicate my workflow (including workflow + repo changes)?:
-  - t 
+  - Workflow: Change the `tags` to indicate the DockerHub repository to whatever repository that would be in use. So, for example, `name/repo:latest` would be the format to adopt to this.
+  - GitHub Repository: Add their own secrets indicating their own username and their own token. They can't use *my* information!
+  - Docker Repository: Of course, they'd have to create this brand new repository that is referenced in the workflow, unless the repo already exists.
 
 

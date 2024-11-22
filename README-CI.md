@@ -2,7 +2,7 @@
 ## Part 1 - Docker-ize It
 
 ### Overview
-In this project, I am tasked to utilize Docker/DockerHub to create and develop a container that runs a given `angular-bird` application. I am also tasked with connecting this GitHub repository to a repository in DockerHub, and interacting with the two in order to edit the container and otherwise. This repository will also describe using GitHub Actions. Finally, I will identify how these tools interact with each other through diagramming. The diagram which describes how everything connects together can be found below.
+In this project, I am tasked to utilize Docker/DockerHub to create and develop a container that runs a given `angular-bird` application. I am also tasked with connecting this GitHub repository to a repository in DockerHub, and interacting with the two in order to edit the container and otherwise. This repository will also describe using GitHub Actions. Finally, I will identify how these tools interact with each other through diagramming. The diagram which describes how everything connects together can be found below (the diagram itself is Part 3 of this Project).
 #### CI Project Diagram
 ![CIDiagram]()
 ### Application Containerization
@@ -72,17 +72,18 @@ This section discusses using DockerHub. It assumes that an account has already b
 - My DockerHub repository, `kclondon22/cox-ceg3120`, can be found linked [here](https://hub.docker.com/repository/docker/kclondon22/cox-ceg3120/general).
 
 ## Part 2 - GitHub Actions and DockerHub
-t
+This section utilizes GitHub Actions to build and push an image each time the repository is pushed to. This will also utilize GitHub Secrets in order to verify the login towards a DockerHub account in order to properly authenticate.
 
 ### Configuring GitHub Secrets
-This section
+This section discusses utilizing Github Secrets for GitHub Actions, and describes how to use it for the context of this project.
 - How to set up a secret for use by GitHub Actions:
   - t 
 - Secrets set for this project (not specific examples):
-  - t 
+  - This project requires `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets, which will hold the DockerHub username/token combination for my account in order to log in to do the build/push combination of the image.
+  - To get a DockerHub account token, go to Account Settings -> Security, and then you can create a new token (make sure, for this context, it has Read and Write permissions)
 
 ### Behavior of Github Workflow
-t
+This section discusses what the workflow does, and how to duplicate it if need be.
 - Summary of what the workflow does:
   - t
 - The workflow file can be found linked [here](). (WIP)

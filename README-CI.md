@@ -75,7 +75,13 @@ This section discusses using DockerHub. It assumes that an account has already b
 This section utilizes GitHub Actions to build and push an image each time the repository is pushed to. This will also utilize GitHub Secrets in order to verify the login towards a DockerHub account in order to properly authenticate.
 
 ### Configuring GitHub Secrets
-This section discusses utilizing Github Secrets for GitHub Actions, and describes how to use it for the context of this project.
+This section discusses utilizing GitHub Secrets for GitHub Actions, and describes how to use it for the context of this project.
+- How to make GitHub Actions:
+  - You need a `.github` folder in your repository's starting directory.
+  - Within that above folder, make a `workflows` folder.
+  - Those should have `yml` files that make up a specific Action.
+    - Unrelated, but you can "deactivate" certain workflows by putting `.old` or something else in front of them, so for example `myfirstflow.yml`.
+  - From there, there is a format you can follow in order to properly create the workflow that you want through a GitHub Action. 
 - How to set up a secret for use by GitHub Actions:
   - t 
 - Secrets set for this project (not specific examples):

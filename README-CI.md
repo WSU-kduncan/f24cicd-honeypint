@@ -4,7 +4,7 @@
 ### Overview
 In this project, I am tasked to utilize Docker/DockerHub to create and develop a container that runs a given `angular-bird` application. I am also tasked with connecting this GitHub repository to a repository in DockerHub, and interacting with the two in order to edit the container and otherwise. This repository will also describe using GitHub Actions. Finally, I will identify how these tools interact with each other through diagramming. The diagram which describes how everything connects together can be found below (the diagram itself is Part 3 of this Project).
 #### CI Project Diagram
-![CIDiagram]()
+![CI Diagram](./images/Proj4-Diagram.png)
 ### Application Containerization
 This section discusses setting up Docker, building the container, and making/using a Dockerfile.
 - How do you install Docker and its' dependencies on the required systems?:

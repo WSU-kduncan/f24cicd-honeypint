@@ -9,5 +9,3 @@ In this project, I am tasked to use Git's tagging using semantic versioning to c
 
 
 ## Part 2 - Deployment
-
-## Part 3 & 4 - Diagramming and Demonstration

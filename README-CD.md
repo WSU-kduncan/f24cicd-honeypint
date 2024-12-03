@@ -6,6 +6,19 @@ In this project, I am tasked to use Git's tagging using semantic versioning to c
 #### CD Project Diagram
 ![CD Diagram]()
 ### Tags in `git`
-
+This section discusses using tags in Git, and how to make them work with everything previously done through GitHub Actions and DockerHub in Project 4.
+- How to generate/push a tag in `git`:
+  - First, make the commits that you want to tag with a certain tag value through the usual method, up to when you want to make the tag. They can be pushed or not.
+  - Use the `git tag` command in the following format: `git tag -a v#.#.#`. You will also be able to add a comment after the command is run, done similarily to how you title a commit.
+   - The version number will be determined by semantic versioning, which is in the structure `vMAJOR.MINOR.PATCH`.
+   - The commit that creates this part of the repository will be given the tag.
+  - Now, you can do `git push origin <version used>`. After this, you can click on a tag, similarily to how you click on a branch, to see what what there at the time.
+- Editing the GitHub Action/Workflow:
+  - At the end of Project 4, the GitHub Action ran every time new commits were pushed. This can be changed to only happen when a new valid TAG is pushed.
+  - How do we change this?:
+    - Setting the workflow to only push when the tag is of a certain semantic versioning format through `tags: -v*.*.*`
+    - Creating a brand new first step that runs docker metadata, to get and set images/tags that will be used based on the above
+    - Edit the push to DockerHub action tags/labels to properly accept when a tag is added through GitHub
+  - With these changes, now if we push, changes will only be pushed to DockerHub if there is a valid tag pushed.
 
 ## Part 2 - Deployment

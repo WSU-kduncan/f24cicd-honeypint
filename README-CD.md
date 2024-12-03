@@ -20,5 +20,7 @@ This section discusses using tags in Git, and how to make them work with everyth
     - Creating a brand new first step that runs docker metadata, to get and set images/tags that will be used based on the above
     - Edit the push to DockerHub action tags/labels to properly accept when a tag is added through GitHub
   - With these changes, now if we push, changes will only be pushed to DockerHub if there is a valid tag pushed.
-
+  - Additionally, the tags are now stored & set onto DockerHub based on Semantic Versioning, based on Latest, Major, Minor, and full versions, to ensure proper backups are able to be made. Sweet!
+    - As able to be seen right now, there are a few tags on DockerHub: `latest`, `1`, `1.0` and `1.0.5` (the reason why it is 1.0.5 is due to a few errors trying to get the versioning to work properly... turns out, I forgot to add the `id: meta` part!) 
+- The DockerHub repository where these tags were pushed can be found linked [here](https://hub.docker.com/r/kclondon22/cox-ceg3120).
 ## Part 2 - Deployment

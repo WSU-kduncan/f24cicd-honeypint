@@ -12,7 +12,7 @@ jobs:
       - name: Docker metadata
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/cox-ceg3120
+          images: kclondon22/cox-ceg3120
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}

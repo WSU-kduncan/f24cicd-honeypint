@@ -24,3 +24,26 @@ This section discusses using tags in Git, and how to make them work with everyth
     - As able to be seen right now, there are a few tags on DockerHub: `latest`, `1`, `1.0` and `1.0.5` (the reason why it is 1.0.5 is due to a few errors trying to get the versioning to work properly... turns out, I forgot to add the `id: meta` part!) 
 - The DockerHub repository where these tags were pushed can be found linked [here](https://hub.docker.com/r/kclondon22/cox-ceg3120).
 ## Part 2 - Deployment
+This section discusses deploying my DockerHub image into a new instance hosted through AWS, running it/setup involved with doing so, creating a bash script to simplify updating a container image on said instance, and integrating this script with a webhook to automate the running of this bash script.
+- Instance settings: Ubuntu 22.04 instance on AWS, as a `T2.small` to support Docker. Public IP (which I set as an Elastic IP) is `44.216.255.223`.
+  - The instance can install Docker using `sudo apt install docker.io`. I can then pull my Docker image that is on DockerHub using `docker image pull user/repo`.
+- Information about the bash script created for this project:
+  - What is this for?:
+  - What does it do?:
+  - On my instance, this script can be found ...
+  - An example of this bash script can be found linked [here](), in this repository.
+- Installing adnanh's webhook into the instance:
+  - Steps:
+    - t
+  - Why?:  
+- Information about the webhook definition created for this project:
+  - What does it do?:
+  - On my instance, this definition can be found ...
+  - An example of this webhook definition can be found linked [here](), in this repository.
+- t
+- t
+- t
+- t
+- t
+- t
+- t

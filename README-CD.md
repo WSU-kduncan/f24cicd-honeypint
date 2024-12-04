@@ -28,10 +28,10 @@ This section discusses deploying my DockerHub image into a new instance hosted t
 - Instance settings: Ubuntu 22.04 instance on AWS, as a `T2.small` to support Docker. Public IP (which I set as an Elastic IP) is `44.216.255.223`.
   - The instance can install Docker using `sudo apt install docker.io`. I can then pull my Docker image that is on DockerHub using `docker image pull user/repo`.
 - Information about the bash script created for this project:
-  - What is this for?:
-  - What does it do?:
-  - On my instance, this script can be found ...
-  - An example of this bash script can be found linked [here](), in this repository.
+  - What is this for?: This script will be used for us to be able to update the container with an updated image that is running on our instance with ease.
+  - What does it do?: This script stops and removes the previous container running the image (called `angular-site`), pulls the latest version of the image from DockerHub (therefore updating the image if it is outdated), and then starts a new container called `angular-site` with that image. This basically automatically "updates" the image that is being run within a container on an instance.
+  - On my instance, this script can be found in `home/ubuntu/deployment/update.sh`
+  - An example of this bash script can be found linked [here](./deployment/update.sh), in this repository.
 - Installing adnanh's webhook into the instance:
   - Steps:
     - t

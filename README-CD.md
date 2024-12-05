@@ -33,17 +33,20 @@ This section discusses deploying my DockerHub image into a new instance hosted t
   - On my instance, this script can be found in `home/ubuntu/deployment/update.sh`
   - An example of this bash script can be found linked [here](./deployment/update.sh), in this repository.
 - Installing adnanh's webhook into the instance:
-  - Steps:
-    - t
-  - Why?:  
+  - Installing this webhook is relatively easy - I used `sudo apt-get install webhook` to install it on my Ubuntu instance.
+  - The port needs to be properly configured. ...
+  - What is this used for?: adnanh's webhook is used for the creation of HTTP endpoints (or webhooks) on the server that can be used to run instanced commands, as described in [the project's GitHub page](https://github.com/adnanh/webhook). 
 - Information about the webhook definition created for this project:
   - What does it do?:
-  - On my instance, this definition can be found ...
-  - An example of this webhook definition can be found linked [here](), in this repository.
-- t
-- t
-- t
-- t
-- t
+  - On my instance, this definition can be found in `home/ubuntu/deployment/hooks.json`
+  - An example of this webhook definition can be found linked [here](./deployment/hooks.json), in this repository.
+  - To start this webhook without using `service`, ...
+- How can we verify that the listener in the webhook actually runs the script?:
+  - t
+  - t
+  - t 
+- Configuring DockerHub/GitHub to message the listener:
+  - t
+  - t 
 - t
 - t

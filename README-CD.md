@@ -37,14 +37,13 @@ This section discusses deploying my DockerHub image into a new instance hosted t
   - The port needs to be properly configured. ...
   - What is this used for?: adnanh's webhook is used for the creation of HTTP endpoints (or webhooks) on the server that can be used to run instanced commands, as described in [the project's GitHub page](https://github.com/adnanh/webhook). 
 - Information about the webhook definition created for this project:
-  - What does it do?:
-  - On my instance, this definition can be found in `home/ubuntu/deployment/hooks.json`
+  - What does it do?: What the webhook definition basically does is run the `update.sh` script that was defined previously. Since webhooks are listening, this means that it can automatically update the script under certain conditions.
+  - On my instance, this definition can be found in `home/ubuntu/deployment/hooks.json` with id `"redeploy"`.
   - An example of this webhook definition can be found linked [here](./deployment/hooks.json), in this repository.
-  - To start this webhook without using `service`, ...
+  - To start this webhook listening without using `service`, ...
 - How can we verify that the listener in the webhook actually runs the script?:
-  - t
-  - t
-  - t 
+  - The webhook is started with `webhook -hooks hooks.json -verbose`, and then is currently "triggered" by a connection through HTTP to `http://44.216.255.223:9000/hooks/redeploy`. Ideally, we will have this listen elsewhere.
+  - We can tell that the container is running based on output printed through the logs. The logs have the input of `docker ps -a` that proves the container was created. We can also verify the deletions, the pull, and so on were performed.
 - Configuring DockerHub/GitHub to message the listener:
   - t
   - t 

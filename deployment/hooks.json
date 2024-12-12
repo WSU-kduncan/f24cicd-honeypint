@@ -7,7 +7,7 @@
   {
    "id": "redeploy",
    "execute-command": "deployment/update.sh",
-  "command-working-directory": "/home/ubuntu",
+   "command-working-directory": "/home/ubuntu",
    "pass-arguments-to-command": [
     {
      "source": "entire-payload"

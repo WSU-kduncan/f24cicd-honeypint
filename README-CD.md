@@ -52,5 +52,5 @@ This section discusses deploying my DockerHub image into a new instance hosted t
 - Configure a service file to start the webhook listener automatically when the instance starts:
   - The `service` file already existed, and was created when I installed adnanh's webhook project. It can be found under `/usr/lib/systemd/system/webhook.service`, and must be edited using `sudo` (as I do not own the file).
   - What changed?: I basically made everything that pointed to a config file for the webhooks, to instead point to my `hooks.json` file in my home directory. Therefore, this service file now interacts with that instead.
-  - Commands: you have to `systemctl stop webhook.service`, and then `systemctl start webhook.service` in order to basically run the changes.
+  - Commands: you have to `systemctl daemon-reload` after making the changes to the service file, then `systemctl stop webhook.service`, and then `systemctl start webhook.service` in order to basically run the changes.
   - The webhook service file can be found linked [here](./deployment/webhook.service), in this repository.

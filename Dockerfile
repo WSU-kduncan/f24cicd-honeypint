@@ -4,10 +4,11 @@ FROM node:18-bullseye
 WORKDIR /usr/src/angular
 
 # copy the files from the program in angular-site into the working directory
-COPY ./angular-site/wsu-hw-ng-main .
+COPY ./angular-site/wsu-hw-ng-main /usr/src/angular
 
 # install dependencies
-RUN npm install -g @angular/cli
+RUN npm install
+RUN npm install -g @angular/cli@15.0.3
 
 # tell the port number the container should expose
 EXPOSE 4200

@@ -2,9 +2,9 @@
 ## Part 1 - Semantic Versioning
 
 ### Overview
-In this project, I am tasked to use Git's tagging using semantic versioning to cause the GitHub Action defined in Project4 to run under more specific circumstances, happening when the tag is updating and adopting this tag to be used with the image when it is pushed to DockerHub. I am also tasked with using an EC2 instance to pull the image from DockerHub and run it properly, as well as utilizing webhooks that run a bash script alongside it. Found below is a diagram that dictates how everything interacts (which is Part 3 of the project). A demonstration will also be made to show that this works (which is Part 4 of the project).
+In this project, I am tasked to use Git's tagging using semantic versioning to cause the GitHub Action defined in Project4 to run under more specific circumstances, happening when the tag is updating and adopting this tag to be used with the image when it is pushed to DockerHub. I am also tasked with using an EC2 instance to pull the image from DockerHub and run it properly, as well as utilizing webhooks that run a bash script alongside it. Found below is a diagram that dictates how everything interacts (which is Part 3 of the project). A demonstration will also be made to show that this works (which is Part 4 of the project). This demonstration can be found linked [here](https://www.youtube.com/watch?v=TqlGmniGtvo).
 #### CD Project Diagram
-![CD Diagram]()
+![CD Diagram](./images/Proj5-Diagram.png)
 ### Tags in `git`
 This section discusses using tags in Git, and how to make them work with everything previously done through GitHub Actions and DockerHub in Project 4.
 - How to generate/push a tag in `git`:

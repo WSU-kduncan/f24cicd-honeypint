@@ -1,7 +1,29 @@
 [
   {
-    "id": "redeploy",
+    "id": "old-redeploy",
     "execute-command": "deployment/update.sh",
     "command-working-directory": "/home/ubuntu"
+  },
+  {
+   "id": "redeploy",
+   "execute-command": "deployment/update.sh",
+   "pass-arguments-to-command": [
+    {
+     "source": "entire-payload"
+     }
+    ],
+    "trigger-rule": {
+     "and": [
+     {
+      "match": {
+       "type": "value",
+       "value": "latest",
+       "parameter": {
+        "source": "payload",
+        "name": "push_data.tag"
+        }
+       }
+      }
+     ]
+    }
   }
-]

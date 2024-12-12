@@ -45,8 +45,12 @@ This section discusses deploying my DockerHub image into a new instance hosted t
   - The webhook is started with the above command, and then is currently "triggered" by a connection through HTTP to `http://44.216.255.223:9000/hooks/redeploy`.
   - We can tell that the container is running based on output printed through the logs. The logs have the input of `docker ps -a` that proves the container was created. We can also verify the deletions, the pull, and so on were performed.
 - Configuring DockerHub/GitHub to message the listener:
-  - t
-  - t 
+  - I chose to make DockerHub message the listener in the context of this project. However, webhooks can be interacted in GitHub pretty easily as well, through Settings -> Webhooks.
+  - In DockerHub:
+    - Go to the repository you are working with, and to the "Webhooks" section. Add a webhook that uses the HTTP link above, naming it whatever you want (in my case, AWS Instance Deployment).
+    - The `hooks.json`/webhook also needs to be edited in order to support only launching the webhook when the `latest` tagged image is updated on DockerHub. Otherwise, it will run the webhook **four times** on a DockerHub push. (I renamed the old webhook I had to `old-redeploy`, and made a new `redeploy` that fulfills this requirement)   
 - Configure a service file to start the webhook listener automatically when the instance starts:
-  - Commands:
-  - The webhook service file can be found linked [here](), in this repository.
+  - The `service` file already existed, and was created when I installed adnanh's webhook project. It can be found under `/usr/lib/systemd/system/webhook.service`, and must be edited using `sudo` (as I do not own the file).
+  - What changed?: I basically made everything that pointed to a config file for the webhooks, to instead point to my `hooks.json` file in my home directory. Therefore, this service file now interacts with that instead.
+  - Commands: you have to `systemctl stop webhook.service`, and then `systemctl start webhook.service` in order to basically run the changes.
+  - The webhook service file can be found linked [here](./deployment/webhook.service), in this repository.

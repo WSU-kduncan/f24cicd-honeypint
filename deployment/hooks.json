@@ -1,0 +1,7 @@
+[
+  {
+    "id": "redeploy",
+    "execute-command": "deployment/update.sh",
+    "command-working-directory": "/home/ubuntu"
+  }
+]

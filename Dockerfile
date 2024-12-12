@@ -7,7 +7,7 @@ WORKDIR /usr/src/angular
 COPY ./angular-site/wsu-hw-ng-main .
 
 # install dependencies
-RUN npm install -g @angular/cli@15.0.3
+RUN npm install -g @angular/cli
 
 # tell the port number the container should expose
 EXPOSE 4200
